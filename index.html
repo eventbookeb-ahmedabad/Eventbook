@@ -7,107 +7,186 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin:0;
-    font-family:'Poppins', sans-serif;
-    background:#F4F7F9;
-    color:#3A3A3A;
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#F4F7F9;
+color:#3A3A3A;
+scroll-behavior:smooth;
 }
 
-nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+section{
+padding:100px 80px;
 }
 
-.logo {
-    font-family:'Playfair Display', serif;
-    font-size:24px;
-    font-weight:700;
+h1,h2,h3{
+font-family:'Playfair Display',serif;
 }
 
-nav a {
-    margin-left:30px;
-    text-decoration:none;
-    color:#3A3A3A;
-    font-weight:500;
-    transition:0.3s;
+nav{
+position:fixed;
+width:100%;
+background:white;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+z-index:1000;
 }
 
-nav a:hover {
-    color:#63C7D6;
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:#3A3A3A;
+font-weight:500;
 }
 
-.hero {
-    height:100vh;
-    background:url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
+nav a:hover{
+color:#63C7D6;
 }
 
-.overlay {
-    background:rgba(0,0,0,0.5);
-    padding:60px;
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
 }
 
-h1 {
-    font-family:'Playfair Display', serif;
-    font-size:60px;
-    margin:0;
+.overlay{
+background:rgba(0,0,0,0.55);
+padding:60px;
 }
 
-p {
-    font-size:18px;
-    margin-top:20px;
+.btn{
+background:#63C7D6;
+padding:15px 40px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+display:inline-block;
+margin-top:30px;
+font-weight:500;
 }
 
-.btn {
-    background:#63C7D6;
-    padding:15px 40px;
-    border-radius:40px;
-    text-decoration:none;
-    color:white;
-    display:inline-block;
-    margin-top:30px;
+.btn:hover{
+background:#4AB3C3;
 }
 
-.btn:hover {
-    background:#4AB3C3;
+.card{
+background:white;
+padding:40px;
+margin-top:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-footer {
-    background:#3A3A3A;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
+.highlight{
+color:#63C7D6;
+font-weight:600;
+}
+
+footer{
+background:#3A3A3A;
+color:white;
+text-align:center;
+padding:60px 20px;
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<div class="logo">EVENTBOOK</div>
+<div><strong>EVENTBOOK</strong></div>
 <div>
-<a href="https://www.facebook.com/EventBookAhmedabad" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/eventbookeb/" target="_blank">Instagram</a>
+<a href="#about">About</a>
+<a href="#founder">Founder</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
 <div class="overlay">
 <h1>Making Moments Memorable</h1>
 <p>Luxury Weddings • Jain Ceremonies • Corporate Events</p>
-<a href="#" class="btn">Book Consultation</a>
+<a href="#contact" class="btn">Book Consultation</a>
 </div>
 </div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About EventBook</h2>
+<p>
+EventBook is a leading event management company in Ahmedabad specializing in weddings, Jain religious ceremonies, corporate events and social celebrations.
+With over a decade of experience, we transform ideas into unforgettable experiences.
+</p>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+<h2>About Tarak Shah</h2>
+<div class="card">
+<p>
+<span class="highlight">Tarak Shah</span>, Founder & CEO of EventBook, has been in the event industry for over 10 years.
+The journey began while helping a friend organize an event — a simple suggestion to start his own company turned into a flourishing business.
+</p>
+
+<p>
+With deep understanding of cultural traditions, especially Jain ceremonies, and modern luxury event execution,
+Tarak Shah has built EventBook into a trusted name across Ahmedabad.
+</p>
+
+<p>
+His belief: <strong>"An event is not just a function — it is someone’s once-in-a-lifetime memory."</strong>
+</p>
+
+<p>
+📞 Direct Contact: <span class="highlight">+91 9825068948</span>
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="card">
+<h3>Luxury Weddings</h3>
+<p>Mehendi, Haldi, Sangeet, Reception, Mandap Setup, Bridal Entries & Destination Weddings.</p>
+</div>
+
+<div class="card">
+<h3>Jain Religious Events</h3>
+<p>Derasar Setup, Pratishtha Mahotsav, Pooja Arrangements & Community Gatherings.</p>
+</div>
+
+<div class="card">
+<h3>Corporate Events</h3>
+<p>Product Launches, Conferences, Exhibitions & Award Nights.</p>
+</div>
+
+<div class="card">
+<h3>Social Celebrations</h3>
+<p>Birthdays, Anniversaries, Baby Showers & Theme-Based Events.</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact EventBook</h2>
+<p>Ahmedabad, Gujarat</p>
+<p>Email: eventbookeb@gmail.com</p>
+<p>Phone: <strong>+91 9825068948</strong></p>
+
+<a href="https://wa.me/919825068948" class="btn">Chat on WhatsApp</a>
+</section>
 
 <footer>
 <p>© 2026 EventBook – Ahmedabad</p>
