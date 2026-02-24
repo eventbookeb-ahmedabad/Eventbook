@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<title>EventBook – Making Moments Memorable</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EventBook | Luxury Event Management</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
@@ -16,235 +16,357 @@ background:#fff;
 scroll-behavior:smooth;
 }
 
-/* NAVBAR */
+.container{
+width:85%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:100px 0;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+}
+
+.accent{
+width:60px;
+height:3px;
+background:#63C7D6;
+margin:15px auto 30px;
+}
+
 nav{
 position:fixed;
 width:100%;
-top:0;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
+background:white;
+padding:20px 0;
+box-shadow:0 3px 15px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
-nav img{
-height:50px;
+nav .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 nav a{
-color:white;
 margin-left:25px;
 text-decoration:none;
-font-size:15px;
+color:#333;
+font-weight:500;
 }
 
 .call-btn{
-background:#d4af37;
-padding:10px 18px;
+background:#63C7D6;
+color:white;
+padding:10px 20px;
 border-radius:30px;
-color:black;
-font-weight:600;
+text-decoration:none;
 }
 
 /* HERO */
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1606800052052-a08af7148866') center/cover no-repeat;
+background:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf') center/cover;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
 color:white;
-position:relative;
 }
 
-.hero::after{
-content:'';
-position:absolute;
-top:0;left:0;
-width:100%;height:100%;
+.hero-overlay{
 background:rgba(0,0,0,0.6);
-}
-
-.hero-content{
-position:relative;
-z-index:1;
-max-width:800px;
+width:100%;
+padding:100px 0;
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:48px;
-margin-bottom:20px;
+font-size:50px;
+max-width:700px;
 }
 
-.hero p{
-font-size:16px;
-margin-bottom:30px;
-}
-
-.primary-btn{
-background:#d4af37;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-color:black;
-font-weight:600;
+.hero-buttons a{
+display:inline-block;
 margin-right:15px;
-}
-
-.secondary-btn{
-border:1px solid white;
-padding:14px 28px;
+margin-top:20px;
+padding:12px 25px;
 border-radius:30px;
 text-decoration:none;
+}
+
+.primary{
+background:#63C7D6;
 color:white;
 }
 
-/* SECTION */
-section{
-padding:80px 8%;
-text-align:center;
+.secondary{
+border:2px solid white;
+color:white;
 }
 
-section h2{
-font-family:'Playfair Display',serif;
-font-size:34px;
-margin-bottom:40px;
-}
-
-/* SERVICES GRID */
-.grid{
+/* CARDS */
+.card-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
 .card{
-border-radius:15px;
+position:relative;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-transition:0.3s;
+border-radius:10px;
 }
 
 .card img{
 width:100%;
-height:250px;
+height:300px;
 object-fit:cover;
 }
 
-.card h3{
-margin:15px 0;
+.card-title{
+position:absolute;
+bottom:20px;
+left:20px;
+color:white;
+font-size:20px;
+}
+
+/* 2 column */
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+/* WHY CHOOSE */
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.feature{
+padding:30px;
+background:#f7f9fb;
+text-align:center;
+border-radius:10px;
 }
 
 /* CONTACT */
-.contact{
-background:#111;
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+}
+
+button{
+background:#63C7D6;
 color:white;
-}
-
-.contact h2{
-color:#d4af37;
-}
-
-.contact p{
-margin:10px 0;
+padding:12px 25px;
+border:none;
+border-radius:30px;
 }
 
 /* FOOTER */
 footer{
-background:black;
+background:#0f1a1f;
 color:white;
-text-align:center;
-padding:20px;
-font-size:14px;
+padding:70px 0;
 }
 
-/* WHATSAPP */
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+/* WhatsApp */
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25D366;
 color:white;
-padding:12px 18px;
-border-radius:30px;
+padding:15px 20px;
+border-radius:50px;
 text-decoration:none;
-font-weight:600;
 }
+
+@media(max-width:900px){
+.two-col,.contact-grid{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:36px;
+}
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<img src="logo.png" alt="EventBook Logo">
+<div class="container">
+<strong>EVENTBOOK</strong>
 <div>
+<a href="#about">About</a>
+<a href="#weddings">Weddings</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 <a href="tel:9825068948" class="call-btn">Call Now</a>
 </div>
+</div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-<div class="hero-content">
-<h1>Where Every Celebration Becomes a Timeless Memory</h1>
-<p>From luxury weddings to Jain religious events and high-impact corporate gatherings — EventBook crafts experiences that stay in hearts forever.</p>
-<a href="#contact" class="primary-btn">Plan My Event</a>
-<a href="#contact" class="secondary-btn">Book Consultation</a>
+<div class="hero-overlay">
+<div class="container">
+<h1>Where Every Celebration Becomes a Timeless Memory.</h1>
+<div class="hero-buttons">
+<a href="#contact" class="primary">Plan My Event</a>
+<a href="#contact" class="secondary">Book Free Consultation</a>
+</div>
+</div>
 </div>
 </div>
 
-<section id="services">
-<h2>Our Offerings</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
-<h3>Wedding Planning</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa">
-<h3>Mehndi & Sangeet</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678">
-<h3>Corporate Events</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6">
-<h3>Jain Religious Events</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622">
-<h3>Birthday Celebrations</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30">
-<h3>Exhibition & Social Events</h3>
-</div>
-
+<!-- ABOUT -->
+<section id="about">
+<div class="container" style="text-align:center;">
+<h2>Ahmedabad's Trusted Event Management Company</h2>
+<div class="accent"></div>
+<p>
+EventBook brings creativity, discipline, and elegance to weddings, Jain religious functions, corporate gatherings, and social celebrations across Gujarat.
+</p>
 </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- WEDDINGS -->
+<section id="weddings">
+<div class="container">
+<h2 style="text-align:center;">Your Wedding, Beautifully Orchestrated</h2>
+<div class="accent"></div>
+<div class="card-grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606800052052-a08af7148866">
+<div class="card-title">Luxury Mandap Design</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+<div class="card-title">Elegant Stage Decor</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- JAIN -->
+<section>
+<div class="container two-col">
+<div>
+<h2>Sacred Setups with Purity & Respect</h2>
+<div class="accent" style="margin-left:0;"></div>
+<p>Deep understanding of Jain rituals and traditions.</p>
+<ul>
+<li>Proper derasar alignment</li>
+<li>Minimal & disciplined decor</li>
+<li>Community seating arrangements</li>
+</ul>
+</div>
+<img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548" style="width:100%;border-radius:10px;">
+</div>
+</section>
+
+<!-- CORPORATE -->
+<section>
+<div class="container">
+<h2 style="text-align:center;">Professional Events. Powerful Impressions.</h2>
+<div class="accent"></div>
+<img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678" style="width:100%;border-radius:10px;">
+</div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section>
+<div class="container">
+<h2 style="text-align:center;">Why Choose EventBook</h2>
+<div class="accent"></div>
+<div class="feature-grid">
+<div class="feature">10+ Years Experience</div>
+<div class="feature">Jain Cultural Expertise</div>
+<div class="feature">Creative Concepts</div>
+<div class="feature">Transparent Pricing</div>
+<div class="feature">Strong Vendor Network</div>
+<div class="feature">Dedicated Event Manager</div>
+<div class="feature">Stress-Free Planning</div>
+<div class="feature">On-Time Execution</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container contact-grid">
+<div>
 <h2>Get In Touch</h2>
-<p><strong>Phone / WhatsApp:</strong> +91 9825068948</p>
+<p><strong>Phone:</strong> +91 9825068948</p>
 <p><strong>Email:</strong> eventbookeb@gmail.com</p>
 <p><strong>Location:</strong> Ahmedabad, Gujarat</p>
+</div>
+
+<div>
+<h2>Send Us a Message</h2>
+<form action="https://formsubmit.co/eventbookeb@gmail.com" method="POST">
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="email" placeholder="Email Address" required>
+<textarea placeholder="Tell us about your event"></textarea>
+<button type="submit">Send Inquiry</button>
+</form>
+</div>
+
+</div>
 </section>
 
 <footer>
-© 2026 EventBook | Luxury Event Management | Ahmedabad
+<div class="container footer-grid">
+<div>
+<h3>EventBook</h3>
+<p>Making moments memorable since 10+ years.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<p><a href="#about">About</a></p>
+<p><a href="#weddings">Weddings</a></p>
+</div>
+<div>
+<h3>Services</h3>
+<p>Wedding Planning</p>
+<p>Jain Events</p>
+<p>Corporate Events</p>
+</div>
+<div>
+<h3>Contact</h3>
+<p>+91 9825068948</p>
+<p>eventbookeb@gmail.com</p>
+</div>
+</div>
 </footer>
 
 <a href="https://wa.me/919825068948" class="whatsapp">WhatsApp</a>
